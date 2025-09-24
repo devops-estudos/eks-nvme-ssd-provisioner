@@ -71,6 +71,8 @@ spec:
       serviceAccountName: local-storage-admin
       nodeSelector:
         aws.amazon.com/eks-local-ssd: "true"
+      tolerations:
+        - operator: "Exists"
       containers:
         - image: "quay.io/external_storage/local-volume-provisioner:v2.3.3"
           name: provisioner
@@ -120,4 +122,5 @@ metadata:
   name: local-storage
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: WaitForFirstConsumer
+allowVolumeExpansion: true
 reclaimPolicy: Delete
