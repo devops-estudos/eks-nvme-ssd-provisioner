@@ -8,7 +8,7 @@ on:
 env:
   ARTIFACT_NAME: eks-nvme-ssd-provisioner
   DOCKER_REGISTRY: ghcr.io
-  IMAGE_NAME: devops-estudos/deals
+  IMAGE_NAME: devops-estudos/eks-nvme-ssd-provisioner
 
 jobs:
   publish:
